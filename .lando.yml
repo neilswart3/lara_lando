@@ -1,0 +1,19 @@
+name: lara_lando
+recipe: laravel
+stats:
+  - report: false
+config:
+  webroot: public
+  via: nginx
+  php: '7.2'
+  xdebug: false
+excludes: 
+  - vendor
+  - node_modules
+  
+services:
+  database:
+    type: postgres
+    portforward: 5432
+    creds:
+      database: lara_lando
